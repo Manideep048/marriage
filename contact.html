@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .contact {
+            height: 100vh;
+            padding: 60px 20px;
+            background: url('pics/cont.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .contact h1 {
+            margin-bottom: 40px;
+            color: #ff4500;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact form {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact .inputBox {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .contact .inputBox input,
+        .contact textarea {
+            width: 48%;
+            padding: 15px;
+            height: 50px;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact .inputBox input:focus,
+        .contact textarea:focus {
+            border-color: #ff4500;
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 5px rgba(255, 102, 0, 0.7);
+        }
+
+        .contact .inputBox input::placeholder,
+        .contact textarea::placeholder {
+            color: #ddd;
+            font-style: italic;
+        }
+
+        .contact .btn {
+            background: #ffcc00;
+            border: 2px solid #ff4500;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+            z-index: 2;
+            position: relative;
+            border-radius: 5px;
+            height: 50px;
+        }
+
+        .contact .btn:hover {
+            background: #ff4500;
+            box-shadow: 0 0 5px rgba(255, 102, 0, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            .contact .inputBox {
+                flex-direction: column;
+            }
+
+            .contact .inputBox input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact Us</span></h1>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Phone Number" required>
+                <input type="text" placeholder="Subject" required>
+            </div>
+            <textarea name="" placeholder="Your Message" id="" cols="30" rows="10" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+</body>
+
+</html>

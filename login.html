@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('login.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        /* Overlay Effect */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay */
+        }
+
+        /* Login Container */
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.25); /* Lighter background */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Heading Style */
+        h2 {
+            font-family: 'Lobster', cursive;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Gold color */
+        }
+
+        /* Textbox Styles */
+        .textbox {
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.5); /* Lighter input background */
+            transition: background-color 0.3s ease;
+        }
+
+        .textbox input::placeholder {
+            color: #f0f0f0;
+        }
+
+        .textbox input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.7); /* Brighter on focus */
+        }
+
+        /* Submit Button */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffcc00; /* Gold color */
+            color: black;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e6b800; /* Darker gold */
+            transform: translateY(-3px);
+        }
+
+        /* Signup Link */
+        div a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        div a:hover {
+            text-decoration: underline;
+        }
+
+        div {
+            margin-top: 15px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <h2>Welcome Back!</h2>
+        <form action="#" method="POST">
+            <div class="textbox">
+                <input type="text" placeholder="Username" name="username" required>
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <input type="submit" class="btn" value="Login">
+            <div>
+                Don't have an account? <a href="signup.html"><span>Signup Here</span></a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
